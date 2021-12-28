@@ -23,6 +23,7 @@ resource "aws_db_instance" "default" {
   tags = {
     Name        = "${local.resource_prefix.value}-rds"
     Environment = local.resource_prefix.value
+    yor_trace   = "21674042-b84b-4b7d-a75c-0f7f301a93a2"
   }
 
   # Ignore password changes from tf plan diff
@@ -40,6 +41,7 @@ resource "aws_db_option_group" "default" {
   tags = {
     Name        = "${local.resource_prefix.value}-og"
     Environment = local.resource_prefix.value
+    yor_trace   = "0c99611c-9b7e-496b-a2c1-94de795cbb7d"
   }
 }
 
@@ -63,6 +65,7 @@ resource "aws_db_parameter_group" "default" {
   tags = {
     Name        = "${local.resource_prefix.value}-pg"
     Environment = local.resource_prefix.value
+    yor_trace   = "dcfc88fc-c06b-4fde-85a3-a6f6884508c6"
   }
 }
 
@@ -74,6 +77,7 @@ resource "aws_db_subnet_group" "default" {
   tags = {
     Name        = "sg-${local.resource_prefix.value}"
     Environment = local.resource_prefix.value
+    yor_trace   = "395c1f07-829e-492b-9b24-421e4e1f6859"
   }
 }
 
@@ -84,6 +88,7 @@ resource "aws_security_group" "default" {
   tags = {
     Name        = "${local.resource_prefix.value}-rds-sg"
     Environment = local.resource_prefix.value
+    yor_trace   = "d71d5d87-52fc-4cf8-a5ee-193f86cad2c6"
   }
 }
 
@@ -110,6 +115,9 @@ resource "aws_security_group_rule" "egress" {
 resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
+  tags = {
+    yor_trace = "57798dc6-0ba1-484c-97c0-fef598a3939f"
+  }
 }
 
 resource "aws_iam_role" "ec2role" {
@@ -135,6 +143,7 @@ EOF
   tags = {
     Name        = "${local.resource_prefix.value}-role"
     Environment = local.resource_prefix.value
+    yor_trace   = "404e1c5f-311f-4861-ad05-d66e986e78c1"
   }
 }
 
@@ -301,7 +310,8 @@ sudo mv /tmp/index.php /var/www/html
 sudo chown root:root /var/www/html/index.php
 EOF
   tags = {
-    Name = "${local.resource_prefix.value}-dbapp"
+    Name      = "${local.resource_prefix.value}-dbapp"
+    yor_trace = "dc949b87-e8dc-4941-bca7-ffbb25aed738"
   }
 }
 

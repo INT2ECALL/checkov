@@ -96,6 +96,7 @@ resource "aws_cloudfront_distribution" "fail" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "ae95e1a1-f143-49f6-b251-ee60ec5151b2"
   }
 
   viewer_certificate {
@@ -201,11 +202,12 @@ resource "aws_cloudfront_distribution" "fail2" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "f975bba9-038f-4cd0-b475-bec3453327f1"
   }
 
   viewer_certificate {
     cloudfront_default_certificate = false
-    minimum_protocol_version = "TLSv1"
+    minimum_protocol_version       = "TLSv1"
   }
 }
 
@@ -307,6 +309,7 @@ resource "aws_cloudfront_distribution" "fail3" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "8a6760e1-3cac-4da1-bea8-b8ab01451963"
   }
 
   viewer_certificate {
@@ -414,10 +417,11 @@ resource "aws_cloudfront_distribution" "pass" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "6cbef619-3010-4ea6-bb41-6f233ff484a9"
   }
 
   viewer_certificate {
     cloudfront_default_certificate = false
-    minimum_protocol_version = "TLSv1.2_2018"
+    minimum_protocol_version       = "TLSv1.2_2018"
   }
 }

@@ -11,6 +11,9 @@ resource "aws_elasticache_replication_group" "pass" {
   engine_version                = "3.2.6"
   at_rest_encryption_enabled    = true
   kms_key_id                    = aws_kms_key.bar.arn
+  tags = {
+    yor_trace = "000baab6-929b-4618-af51-ffa693f45eb7"
+  }
 }
 
 resource "aws_elasticache_replication_group" "fail" {
@@ -25,4 +28,7 @@ resource "aws_elasticache_replication_group" "fail" {
   availability_zones            = [data.aws_availability_zones.available.names[0]]
   engine_version                = "3.2.6"
   at_rest_encryption_enabled    = true
+  tags = {
+    yor_trace = "bfae627c-cadb-45ae-8392-d922936e8b03"
+  }
 }

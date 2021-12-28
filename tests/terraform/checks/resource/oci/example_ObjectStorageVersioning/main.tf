@@ -3,9 +3,11 @@ resource "oci_objectstorage_bucket" "pass" {
   name           = var.bucket_name
   namespace      = var.namespace
 
-  access_type           = var.bucket_access_type
-  defined_tags          = var.defined_tags
-  freeform_tags         = var.freeform_tags
+  access_type  = var.bucket_access_type
+  defined_tags = var.defined_tags
+  freeform_tags = merge(var.freeform_tags, {
+    yor_trace = "19126281-66ba-4d39-9129-1d0d40743005"
+  })
   kms_key_id            = var.oci_kms_key.id
   metadata              = var.metadata
   storage_tier          = var.bucket_storage_tier
@@ -30,9 +32,11 @@ resource "oci_objectstorage_bucket" "fail" {
   name           = var.bucket_name
   namespace      = var.namespace
 
-  access_type           = var.bucket_access_type
-  defined_tags          = var.defined_tags
-  freeform_tags         = var.freeform_tags
+  access_type  = var.bucket_access_type
+  defined_tags = var.defined_tags
+  freeform_tags = merge(var.freeform_tags, {
+    yor_trace = "3694bba1-689f-411d-81c3-671d6084baff"
+  })
   kms_key_id            = var.oci_kms_key.id
   metadata              = var.metadata
   storage_tier          = var.bucket_storage_tier
@@ -56,9 +60,11 @@ resource "oci_objectstorage_bucket" "default" {
   name           = var.bucket_name
   namespace      = var.namespace
 
-  access_type           = var.bucket_access_type
-  defined_tags          = var.defined_tags
-  freeform_tags         = var.freeform_tags
+  access_type  = var.bucket_access_type
+  defined_tags = var.defined_tags
+  freeform_tags = merge(var.freeform_tags, {
+    yor_trace = "5a805e10-aad3-4153-a212-a4ddc70761a9"
+  })
   kms_key_id            = var.oci_kms_key.id
   metadata              = var.metadata
   storage_tier          = var.bucket_storage_tier

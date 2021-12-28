@@ -9,5 +9,7 @@ Resources:
       Tags:
         - Key: MyTag
           Value: TagValue
+        - Key: yor_trace
+          Value: 82acdce2-6b69-4e82-af2d-ee20041f9467
     DeletionPolicy: Snapshot
 

@@ -34,6 +34,12 @@
         "EC2Instance": {
             "Type": "AWS::EC2::Instance",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "86997738-a5ce-4621-9d4e-c7acb561b825"
+                  }
+                ],
                 "InstanceType": {
                     "Fn::If": [
                         "CreateProdResources",
@@ -54,6 +60,12 @@
         "S3BucketSuspended": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "7530f75a-1655-40a3-98f4-07211bda4667"
+                  }
+                ],
                 "VersioningConfiguration": {
                     "Status": {
                         "Fn::If": [
@@ -68,6 +80,12 @@
         "S3BucketEnabled": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "7262c3ec-7b20-42a4-b8b3-e456b2f375df"
+                  }
+                ],
                 "VersioningConfiguration": {
                     "Status": {
                         "Fn::If": [

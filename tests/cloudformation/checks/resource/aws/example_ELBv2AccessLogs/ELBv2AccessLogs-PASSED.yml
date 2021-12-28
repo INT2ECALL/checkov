@@ -12,3 +12,6 @@ Resources:
       Subnets:
       - SubnetID0
       - SubnetID1
+      Tags:
+        - Key: yor_trace
+          Value: b4513a05-ec16-4b45-b229-1589f62ed6f1

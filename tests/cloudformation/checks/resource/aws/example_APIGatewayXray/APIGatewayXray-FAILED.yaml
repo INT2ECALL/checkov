@@ -27,6 +27,9 @@ Resources:
           MetricsEnabled: true
           DataTraceEnabled: false
           ThrottlingBurstLimit: 555
+      Tags:
+        - Key: yor_trace
+          Value: 31311082-a814-470e-bfcd-bdef7728176b
   MyStage1:
     Type: AWS::ApiGateway::Stage
     Properties:
@@ -53,3 +56,6 @@ Resources:
           MetricsEnabled: true
           DataTraceEnabled: false
           ThrottlingBurstLimit: 555
+      Tags:
+        - Key: yor_trace
+          Value: 1916256f-866f-4374-b0e6-dd381e10f3c2

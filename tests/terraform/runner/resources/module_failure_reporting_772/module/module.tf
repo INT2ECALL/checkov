@@ -6,4 +6,7 @@
 # Bucket that will fail (no encryption) defined INSIDE a module
 resource "aws_s3_bucket" "inside" {
   bucket = "inside-bucket"
+  tags = {
+    yor_trace = "7b5abef0-765f-43e9-89b9-cc3b7495558b"
+  }
 }

@@ -7,6 +7,9 @@ resource "aws_waf_web_acl" "fail" {
   default_action {
     type = "ALLOW"
   }
+  tags = {
+    yor_trace = "45b1fcf8-a46c-4e99-bf5a-2199e7e09061"
+  }
 }
 
 provider "aws" {
@@ -46,6 +49,9 @@ resource "aws_waf_web_acl" "pass" {
       }
     }
   }
+  tags = {
+    yor_trace = "e18b623c-328a-4e49-89da-3346cfafb69f"
+  }
 }
 
 resource "aws_wafregional_web_acl" "pass" {
@@ -80,6 +86,9 @@ resource "aws_wafregional_web_acl" "pass" {
       }
     }
   }
+  tags = {
+    yor_trace = "e6386a83-3ae1-4453-985f-88560f69a5e7"
+  }
 }
 
 resource "aws_wafregional_web_acl" "fail" {
@@ -90,4 +99,7 @@ resource "aws_wafregional_web_acl" "fail" {
     type = "ALLOW"
   }
 
+  tags = {
+    yor_trace = "5475197e-f700-4b1d-8033-ace78f69170e"
+  }
 }

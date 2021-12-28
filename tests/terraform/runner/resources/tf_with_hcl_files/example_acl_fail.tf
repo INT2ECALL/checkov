@@ -4,7 +4,8 @@ resource "aws_s3_bucket" "foo-bucket" {
   force_destroy = true
 
   tags = {
-    Name = "foo-${data.aws_caller_identity.current.account_id}"
+    Name      = "foo-${data.aws_caller_identity.current.account_id}"
+    yor_trace = "6ca12fbf-7348-4db4-a365-197cad7bfddf"
   }
   versioning {
     enabled = true
@@ -21,6 +22,6 @@ resource "aws_s3_bucket" "foo-bucket" {
       }
     }
   }
-  acl           = "public-read"
+  acl = "public-read"
 }
 data "aws_caller_identity" "current" {}

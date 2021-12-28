@@ -5,3 +5,6 @@ Resources:
     Properties:
       DatabaseName: timestream
       KmsKeyId: kms-key-id
+      Tags:
+        - Key: yor_trace
+          Value: 452e03a0-fab6-4ccf-80e0-b8383f596ff4

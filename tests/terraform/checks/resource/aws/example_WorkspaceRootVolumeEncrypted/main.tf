@@ -15,7 +15,9 @@ resource "aws_workspaces_workspace" "pass" {
     running_mode_auto_stop_timeout_in_minutes = 60
   }
 
-  tags = var.common_tags
+  tags = merge(var.common_tags, {
+    yor_trace = "f142a200-7602-48dc-865b-6a0b89ad2726"
+  })
 }
 
 resource "aws_workspaces_workspace" "fail" {
@@ -34,5 +36,7 @@ resource "aws_workspaces_workspace" "fail" {
     running_mode_auto_stop_timeout_in_minutes = 60
   }
 
-  tags = var.common_tags
+  tags = merge(var.common_tags, {
+    yor_trace = "5ba0b917-0838-4964-95be-ecac6082d5cd"
+  })
 }

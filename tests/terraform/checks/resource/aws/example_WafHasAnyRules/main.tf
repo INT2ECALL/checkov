@@ -7,6 +7,9 @@ resource "aws_waf_web_acl" "fail" {
   default_action {
     type = "ALLOW"
   }
+  tags = {
+    yor_trace = "808c60ae-da33-4c40-9705-28873f9e7220"
+  }
 }
 
 resource "aws_waf_web_acl" "fail2" {
@@ -18,6 +21,9 @@ resource "aws_waf_web_acl" "fail2" {
   }
   rules {
 
+  }
+  tags = {
+    yor_trace = "1148f232-70cc-4928-97b5-5c6547a0e3a0"
   }
 }
 
@@ -43,6 +49,9 @@ resource "aws_waf_web_acl" "pass" {
       type = "BLOCK"
     }
   }
+  tags = {
+    yor_trace = "0ce1531b-42ca-4ef2-ba7a-4c7928050fdf"
+  }
 }
 
 resource "aws_wafregional_web_acl" "pass" {
@@ -62,6 +71,9 @@ resource "aws_wafregional_web_acl" "pass" {
     rule_id  = aws_wafregional_rule.wafrule.id
     type     = "REGULAR"
   }
+  tags = {
+    yor_trace = "52d473c6-c24b-4214-ad31-fc66583fad3a"
+  }
 }
 
 resource "aws_wafregional_web_acl" "fail" {
@@ -72,6 +84,9 @@ resource "aws_wafregional_web_acl" "fail" {
     type = "ALLOW"
   }
 
+  tags = {
+    yor_trace = "0d1ae018-07f0-4a7f-aac2-a8145ba32dcc"
+  }
 }
 
 resource "aws_wafregional_web_acl" "fail2" {
@@ -83,6 +98,9 @@ resource "aws_wafregional_web_acl" "fail2" {
   }
 
   rule {
+  }
+  tags = {
+    yor_trace = "3556083a-8d61-4e69-825f-0840a5cd521e"
   }
 }
 

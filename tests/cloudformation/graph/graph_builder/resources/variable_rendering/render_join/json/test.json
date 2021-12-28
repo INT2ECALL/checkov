@@ -10,6 +10,12 @@
         "S3Bucket1": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "c3218d67-8035-4eb3-9ab5-692f574dcc9b"
+                  }
+                ],
                 "BucketName": {
                     "Fn::Join": [
                         ":",
@@ -25,6 +31,12 @@
         "S3Bucket2": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "cefee50d-d2cf-43d3-a960-0edea23559c7"
+                  }
+                ],
                 "BucketName": {
                     "Fn::Join": [
                         "_",

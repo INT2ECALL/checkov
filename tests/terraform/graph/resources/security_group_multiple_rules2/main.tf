@@ -36,6 +36,9 @@ resource "aws_security_group" "sg1" {
     self            = "false"
     to_port         = "5432"
   }
+  tags = {
+    yor_trace = "3eec6486-cddb-44df-a851-6d54cdd94248"
+  }
 }
 
 resource "aws_security_group" "sg2" {
@@ -75,5 +78,8 @@ resource "aws_security_group" "sg2" {
     security_groups = ["sg-id-0"]
     self            = "false"
     to_port         = "5432"
+  }
+  tags = {
+    yor_trace = "22dc9747-2adb-4131-9a0b-08c07129968d"
   }
 }

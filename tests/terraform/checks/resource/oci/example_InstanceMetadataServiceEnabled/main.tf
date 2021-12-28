@@ -25,8 +25,10 @@ resource "oci_core_instance" "fail" {
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
 
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "a113e0c6-a0fc-44a2-b7f5-edcd8de8833b"
+  }
 
   instance_options {
     are_legacy_imds_endpoints_disabled = false
@@ -117,8 +119,10 @@ resource "oci_core_instance" "pass" {
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
 
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "3910604b-56a7-434d-992b-0978de258840"
+  }
 
   instance_options {
     are_legacy_imds_endpoints_disabled = true
@@ -212,8 +216,10 @@ resource "oci_core_instance" "fail2" {
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
 
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "9cb1a37c-3845-4bef-aab6-3b3c75477dce"
+  }
 
   ipxe_script                         = var.instance_ipxe_script
   is_pv_encryption_in_transit_enabled = var.instance_is_pv_encryption_in_transit_enabled

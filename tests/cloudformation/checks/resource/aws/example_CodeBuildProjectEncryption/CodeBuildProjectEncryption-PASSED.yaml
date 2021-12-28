@@ -15,6 +15,9 @@ Resources:
       ServiceRole: arn:aws:iam::123456789012:role/CodeBuild-service-role
       Source: 
         Type: NO_SOURCE
+      Tags:
+        - Key: yor_trace
+          Value: 2b9496a6-3eca-4a29-a642-74c2e1540680
   MyCodeBuildProject1:
     Type: AWS::CodeBuild::Project
     Properties: 
@@ -29,6 +32,9 @@ Resources:
       ServiceRole: arn:aws:iam::123456789012:role/CodeBuild-service-role
       Source: 
         Type: NO_SOURCE
+      Tags:
+        - Key: yor_trace
+          Value: 328c8921-6ad1-450d-beb6-f144ecadc04b
   MyCodeBuildProject2:
     Type: AWS::CodeBuild::Project
     Properties: 
@@ -41,3 +47,6 @@ Resources:
       ServiceRole: arn:aws:iam::123456789012:role/CodeBuild-service-role
       Source: 
         Type: NO_SOURCE
+      Tags:
+        - Key: yor_trace
+          Value: 24f48dec-7c21-4a2e-aefc-d46fbb1d1bf0

@@ -8,8 +8,14 @@ Resources:
       LogPublishingOptions:
         AUDIT_LOGS:
           Enabled: False
+      Tags:
+        - Key: yor_trace
+          Value: 81cf9393-c407-4b0a-9b17-f455b4ba5e86
   Resource1:
     Type: 'AWS::Elasticsearch::Domain'
     Properties:
       DomainEndpointOptions:
         EnforceHTTPS: True
+      Tags:
+        - Key: yor_trace
+          Value: 469dbe64-f0bc-40ed-aa5c-3be17cde40c3

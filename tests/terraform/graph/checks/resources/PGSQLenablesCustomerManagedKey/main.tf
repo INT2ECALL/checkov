@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "ok" {
   name     = "ok-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "1c5a7acc-62e8-4e1c-9c2a-d3be8f4a8f70"
+  }
 }
 
 resource "azurerm_key_vault" "ok" {
@@ -10,6 +13,9 @@ resource "azurerm_key_vault" "ok" {
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
   purge_protection_enabled = true
+  tags = {
+    yor_trace = "bd14cd91-7d57-4bf3-90fb-b06b3d32ed6c"
+  }
 }
 
 resource "azurerm_key_vault_access_policy" "server" {
@@ -38,6 +44,9 @@ resource "azurerm_key_vault_key" "ok" {
     azurerm_key_vault_access_policy.client,
     azurerm_key_vault_access_policy.server,
   ]
+  tags = {
+    yor_trace = "9ade4470-710a-41d3-82fa-3f6a7b3375c7"
+  }
 }
 
 resource "azurerm_postgresql_server" "ok" {
@@ -54,6 +63,9 @@ resource "azurerm_postgresql_server" "ok" {
 
   identity {
     type = "SystemAssigned"
+  }
+  tags = {
+    yor_trace = "a9296511-4368-4e9f-8022-e906f8a2d398"
   }
 }
 

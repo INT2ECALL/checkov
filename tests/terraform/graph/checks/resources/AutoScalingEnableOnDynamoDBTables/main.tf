@@ -11,6 +11,9 @@ resource "aws_dynamodb_table" "pass" {
     name = "user-id"
     type = "S"
   }
+  tags = {
+    yor_trace = "726d5e6f-9df8-4ee1-9084-a40e2e59857d"
+  }
 }
 
 resource "aws_appautoscaling_target" "pass" {
@@ -40,13 +43,16 @@ resource "aws_appautoscaling_policy" "pass" {
 }
 
 resource "aws_dynamodb_table" "pass_on_demand" {
-  name           = "user"
-  hash_key       = "user-id"
-  billing_mode   = "PAY_PER_REQUEST"
+  name         = "user"
+  hash_key     = "user-id"
+  billing_mode = "PAY_PER_REQUEST"
 
   attribute {
     name = "user-id"
     type = "S"
+  }
+  tags = {
+    yor_trace = "3951881a-7353-485e-9562-44cdced9aeaf"
   }
 }
 
@@ -63,6 +69,9 @@ resource "aws_dynamodb_table" "fail" {
     name = "user-id"
     type = "S"
   }
+  tags = {
+    yor_trace = "3c703fc9-9e50-4e7a-8f88-82a2f18d3088"
+  }
 }
 
 resource "aws_dynamodb_table" "fail_no_policy" {
@@ -75,6 +84,9 @@ resource "aws_dynamodb_table" "fail_no_policy" {
   attribute {
     name = "user-id"
     type = "S"
+  }
+  tags = {
+    yor_trace = "1daacea8-5b9a-4f6b-b856-767188152c90"
   }
 }
 

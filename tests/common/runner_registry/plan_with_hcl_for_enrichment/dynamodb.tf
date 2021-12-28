@@ -9,4 +9,7 @@ resource "aws_dynamodb_table" "cross-environment-violations" {
     type = "S"
   }
   provider = aws.current_region
+  tags = {
+    yor_trace = "55facc9e-49cd-42b5-9567-d6bbc14f89ef"
+  }
 }

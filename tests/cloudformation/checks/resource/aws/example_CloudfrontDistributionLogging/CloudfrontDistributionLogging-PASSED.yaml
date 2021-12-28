@@ -31,3 +31,6 @@ Resources:
               OriginAccessIdentity: 'origin-access-identity/cloudfront/CloudFrontOriginAccessIdentity'
         Logging:
           Bucket: myawslogbucket.s3.amazonaws.com
+      Tags:
+        - Key: yor_trace
+          Value: 48075cff-9262-4e42-a080-5d3a2aa7606c

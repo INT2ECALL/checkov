@@ -13,3 +13,6 @@ Resources:
         DataTraceEnabled: false
         ThrottlingBurstLimit: 10
         ThrottlingRateLimit: 10
+      Tags:
+        - Key: yor_trace
+          Value: 46946f27-2800-482b-9af9-a6f0805ee316

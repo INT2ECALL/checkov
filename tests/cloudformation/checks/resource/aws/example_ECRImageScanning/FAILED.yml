@@ -6,8 +6,14 @@ Resources:
       RepositoryName: "test"
       ImageScanningConfiguration:
         ScanOnPush: false
+      Tags:
+        - Key: yor_trace
+          Value: 314a0499-be0b-4b54-a53a-49b087c62187
   ImageScanNotSet:
     Type: AWS::ECR::Repository
     Properties: 
       RepositoryName: "test"
+      Tags:
+        - Key: yor_trace
+          Value: 2c4208aa-4651-44c3-a99e-983c19861b1b
 

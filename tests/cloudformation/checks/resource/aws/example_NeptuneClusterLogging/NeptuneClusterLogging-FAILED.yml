@@ -4,8 +4,14 @@ Resources:
     Type: "AWS::Neptune::DBCluster"
     Properties:
       DBClusterIdentifier: DBClusterIdentifier
+      Tags:
+        - Key: yor_trace
+          Value: 13ca90ae-d0ee-43c5-b6a8-e654556695cf
   NeptuneDBClusterEmpty:
     Type: "AWS::Neptune::DBCluster"
     Properties:
       DBClusterIdentifier: DBClusterIdentifier
       EnableCloudwatchLogsExports: []
+      Tags:
+        - Key: yor_trace
+          Value: 80522530-157a-4eed-9422-38411b0081ed

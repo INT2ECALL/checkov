@@ -15,3 +15,6 @@ Resources:
       SSESpecification:
         KMSMasterKeyId: "alias/key"
         SSEEnabled: true
+      Tags:
+        - Key: yor_trace
+          Value: fc8e7eb0-6ef2-4fde-b90c-589ceef87628

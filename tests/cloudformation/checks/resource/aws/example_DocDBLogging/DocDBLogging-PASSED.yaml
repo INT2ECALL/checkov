@@ -7,3 +7,6 @@ Resources:
       MasterUserPassword: password
       StorageEncrypted: true
       EnableCloudwatchLogsExports: ["audit", "profiler"]
+      Tags:
+        - Key: yor_trace
+          Value: e769bef2-3e1a-42ef-bc71-658b9e2bd62b

@@ -12,3 +12,6 @@ Resources:
       Port: 8080
       PreferredBackupWindow: NeptuneDBClusterPreferredBackupWindow
       PreferredMaintenanceWindow: NeptuneDBClusterPreferredMaintenanceWindow
+      Tags:
+        - Key: yor_trace
+          Value: 45f99a3a-219c-4f84-bfc9-9d7d11419bcf

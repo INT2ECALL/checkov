@@ -4,6 +4,12 @@
         "WebVPC": {
             "Type": "AWS::EC2::VPC",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "43c3944a-238c-4065-b7f7-b2f0624ef921"
+                  }
+                ],
                 "CidrBlock": "172.16.0.0/16",
                 "EnableDnsSupport": true,
                 "EnableDnsHostnames": true
@@ -12,6 +18,12 @@
         "MySG": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "294fc347-14cd-4601-a205-5f1fc9fff46e"
+                  }
+                ],
                 "GroupName": "sg_group_name",
                 "GroupDescription": "sg_group_description",
                 "VpcId": {

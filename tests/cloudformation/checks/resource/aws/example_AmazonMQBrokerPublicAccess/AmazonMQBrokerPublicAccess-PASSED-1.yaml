@@ -30,4 +30,7 @@ Resources:
       Users:
         - Password: !Ref AmazonMqPassword
           Username: !Ref AmazonMqUsername
+      Tags:
+        - Key: yor_trace
+          Value: 2a82f249-97d8-4783-bc5f-ed35a7f7e794
 

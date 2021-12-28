@@ -16,6 +16,12 @@
         "MySourceQueue": {
             "Type": "AWS::SQS::Queue",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "4e29eafb-54ef-4281-9ebb-20e5ed3b9559"
+                  }
+                ],
                 "KmsMasterKeyId": {
                     "Ref": "KmsMasterKeyId"
                 }
@@ -24,6 +30,12 @@
         "MyDB": {
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "926165b9-7079-4682-8181-da41beb87aa0"
+                  }
+                ],
                 "DBName": {
                     "Ref": "DBName"
                 },

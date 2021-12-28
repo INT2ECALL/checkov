@@ -23,3 +23,6 @@ Resources:
               - "ecr:InitiateLayerUpload"
               - "ecr:UploadLayerPart"
               - "ecr:CompleteLayerUpload"
+      Tags:
+        - Key: yor_trace
+          Value: 29fcdd2c-4637-4c23-97df-786b9404a29c

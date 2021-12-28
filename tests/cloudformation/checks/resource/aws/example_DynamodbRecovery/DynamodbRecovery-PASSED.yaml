@@ -80,4 +80,7 @@ Resources:
               - "Artist"
               - "NumberOfSongs"
             ProjectionType: "INCLUDE"
+      Tags:
+        - Key: yor_trace
+          Value: 94db39f8-55ec-4173-bd61-68c5059488b8
          

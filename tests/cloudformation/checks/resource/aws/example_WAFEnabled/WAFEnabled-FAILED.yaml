@@ -29,3 +29,6 @@ Resources:
             Id: s3origin
             S3OriginConfig:
               OriginAccessIdentity: 'origin-access-identity/cloudfront/CloudFrontOriginAccessIdentity'
+      Tags:
+        - Key: yor_trace
+          Value: a4134921-7b87-44a6-ae16-1c28cbca6265

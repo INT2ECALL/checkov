@@ -6,3 +6,6 @@ Resources:
       RedrivePolicy:
         deadLetterTargetArn: "example_arn"
         maxReceiveCount: 5
+      Tags:
+        - Key: yor_trace
+          Value: fb7282a9-9d56-4644-b041-d03daae26b33

@@ -1,10 +1,12 @@
 resource "aws_s3_bucket" "this" {
   count = 1
 
-  bucket              = var.bucket
-  acl                 = ""
-  tags                = {}
-  force_destroy       = false
+  bucket = var.bucket
+  acl    = ""
+  tags = {
+    yor_trace = "260d9f00-2e86-4403-bcc2-442ed8e7d84c"
+  }
+  force_destroy = false
 }
 
 resource "aws_s3_bucket_policy" "this" {

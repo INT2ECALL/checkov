@@ -2,7 +2,7 @@ resource "aws_iam_policy" "policy" {
   name        = "my_policy-123456789101"
   path        = "/"
   description = "My test policy"
-  policy = <<EOF
+  policy      = <<EOF
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -16,4 +16,7 @@ resource "aws_iam_policy" "policy" {
   ]
 }
 EOF
+  tags = {
+    yor_trace = "a444fbe5-ee7b-475c-934d-48e8bd88a827"
+  }
 }
