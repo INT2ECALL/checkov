@@ -8,3 +8,6 @@ Resources:
       Name: test
       Parameters: 
         audit_logs: "enabled"
+      Tags:
+        - Key: yor_trace
+          Value: 3ecb049a-0f53-45f1-9096-8386d9112fe2

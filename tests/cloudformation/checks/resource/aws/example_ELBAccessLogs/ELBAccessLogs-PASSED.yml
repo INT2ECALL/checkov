@@ -11,3 +11,6 @@ Resources:
       AccessLoggingPolicy:
         Enabled: true
         S3BucketName: MyBucket
+      Tags:
+        - Key: yor_trace
+          Value: 8f127a25-dcfc-4cd8-bb19-01963b22e546

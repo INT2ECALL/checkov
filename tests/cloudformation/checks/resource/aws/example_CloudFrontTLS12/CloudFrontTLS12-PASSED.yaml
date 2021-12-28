@@ -31,7 +31,9 @@ Resources:
           AcmCertificateArn: "cert-test"
           MinimumProtocolVersion: TLSv1.2_2018
           SslSupportMethod: sni-only
-
+      Tags:
+        - Key: yor_trace
+          Value: 4c09d5fd-4899-46ec-b21e-de6f13c92331
   cloudfrontdistributionPASSED2:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -62,7 +64,9 @@ Resources:
           AcmCertificateArn: "cert-test"
           MinimumProtocolVersion: TLSv1.2_2019
           SslSupportMethod: sni-only
-
+      Tags:
+        - Key: yor_trace
+          Value: da3adfd2-2af9-45fd-922e-998cef10ddef
   cloudfrontdistributionPASSED3:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -93,3 +97,6 @@ Resources:
           AcmCertificateArn: "cert-test"
           MinimumProtocolVersion: TLSv1.2_2021
           SslSupportMethod: sni-only
+      Tags:
+        - Key: yor_trace
+          Value: b34f6269-67bc-41f0-aab3-0695d593a99a

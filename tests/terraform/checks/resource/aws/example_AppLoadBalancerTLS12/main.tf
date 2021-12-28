@@ -86,6 +86,9 @@ resource "aws_alb_listener" "https_fs_1_2" {
     type             = "forward"
     target_group_arn = var.aws_lb_target_group_arn
   }
+  tags = {
+    yor_trace = "4dd0b4ef-e81a-4b6d-9894-bd02f055a907"
+  }
 }
 
 # failure
@@ -137,5 +140,8 @@ resource "aws_alb_listener" "tls_fs_1_1" {
   default_action {
     type             = "forward"
     target_group_arn = var.aws_lb_target_group_arn
+  }
+  tags = {
+    yor_trace = "86a35cb9-70c8-44b9-8803-d612145622a5"
   }
 }

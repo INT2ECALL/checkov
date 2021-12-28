@@ -6,6 +6,9 @@ Resources:
       UserName: test
       BundleId: wsb-abc123456
       DirectoryId: d-abc123456
+      Tags:
+        - Key: yor_trace
+          Value: e9258d45-a70c-4fe7-9ca1-0ddb70ca7a0a
   FailExplicit:
     Type: AWS::WorkSpaces::Workspace
     Properties: 
@@ -13,3 +16,6 @@ Resources:
       BundleId: wsb-abc123456
       DirectoryId: d-abc123456
       RootVolumeEncryptionEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: 15ada1fa-e5d3-422a-89ac-b19f99bb607b

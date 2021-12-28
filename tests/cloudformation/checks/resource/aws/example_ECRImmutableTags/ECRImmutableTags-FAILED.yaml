@@ -23,6 +23,9 @@ Resources:
               - "ecr:InitiateLayerUpload"
               - "ecr:UploadLayerPart"
               - "ecr:CompleteLayerUpload"
+      Tags:
+        - Key: yor_trace
+          Value: 0631faa6-b854-4330-a0f1-ab3c136725ce
   MyRepository1: 
     Type: AWS::ECR::Repository
     Properties: 
@@ -45,3 +48,6 @@ Resources:
               - "ecr:InitiateLayerUpload"
               - "ecr:UploadLayerPart"
               - "ecr:CompleteLayerUpload"
+      Tags:
+        - Key: yor_trace
+          Value: 4b122f79-b076-44a5-861f-06dc219f8f34

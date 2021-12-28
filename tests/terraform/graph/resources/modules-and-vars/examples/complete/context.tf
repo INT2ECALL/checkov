@@ -21,14 +21,16 @@
 module "this" {
   source = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
 
-  enabled             = var.enabled
-  namespace           = var.namespace
-  environment         = var.environment
-  stage               = var.stage
-  name                = var.name
-  delimiter           = var.delimiter
-  attributes          = var.attributes
-  tags                = var.tags
+  enabled     = var.enabled
+  namespace   = var.namespace
+  environment = var.environment
+  stage       = var.stage
+  name        = var.name
+  delimiter   = var.delimiter
+  attributes  = var.attributes
+  tags = merge(var.tags, {
+    yor_trace = "6dbb3692-4dcf-41d9-98d6-44f19805fcd2"
+  })
   additional_tag_map  = var.additional_tag_map
   label_order         = var.label_order
   regex_replace_chars = var.regex_replace_chars

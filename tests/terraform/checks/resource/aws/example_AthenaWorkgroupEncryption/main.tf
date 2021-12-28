@@ -13,6 +13,9 @@ resource "aws_athena_workgroup" "pass" {
       }
     }
   }
+  tags = {
+    yor_trace = "6df61bee-d026-4281-a096-4ce5b9fda239"
+  }
 }
 
 resource "aws_athena_workgroup" "fail" {
@@ -25,6 +28,9 @@ resource "aws_athena_workgroup" "fail" {
     result_configuration {
       output_location = "s3://mys3bucket"
     }
+  }
+  tags = {
+    yor_trace = "ad9a4b9a-266e-42ee-bdf1-fd9fc4d6c0b4"
   }
 }
 

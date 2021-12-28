@@ -56,7 +56,8 @@ resource "aws_elb" "test_ok" {
   connection_draining_timeout = 400
 
   tags = {
-    Name = "foobar-terraform-elb"
+    Name      = "foobar-terraform-elb"
+    yor_trace = "7820eaee-fa1c-4294-89ae-e87372a53897"
   }
 }
 
@@ -110,6 +111,7 @@ resource "aws_elb" "test_bad" {
   connection_draining_timeout = 400
 
   tags = {
-    Name = "foobar-terraform-elb"
+    Name      = "foobar-terraform-elb"
+    yor_trace = "80fea5f0-520f-4adb-b215-0d791d5a944a"
   }
 }

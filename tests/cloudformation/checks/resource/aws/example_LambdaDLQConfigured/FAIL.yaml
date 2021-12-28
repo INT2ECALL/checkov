@@ -9,3 +9,6 @@ Resources:
         S3Bucket: my-bucket
         S3Key: function.zip
       Runtime: python3.8
+      Tags:
+        - Key: yor_trace
+          Value: 3561654f-4d08-4533-9132-e8870463bf4f

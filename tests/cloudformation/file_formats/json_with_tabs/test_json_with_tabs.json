@@ -4,6 +4,12 @@
 		"MySourceQueue": {
 			"Type": "AWS::SQS::Queue",
 			"Properties": {
+				"Tags": [
+				  {
+				    "Key": "yor_trace",
+				    "Value": "69c83395-7f84-446f-9124-5c2c76be7647"
+				  }
+				],
 				"KmsMasterKeyId": "kms_id"
 			}
 		}

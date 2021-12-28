@@ -12,9 +12,11 @@ resource "oci_core_volume" "pass" {
     #Optional
     display_name = var.volume_block_volume_replicas_display_name
   }
-  defined_tags         = { "Operations.CostCenter" = "42" }
-  display_name         = var.volume_display_name
-  freeform_tags        = { "Department" = "Finance" }
+  defined_tags = { "Operations.CostCenter" = "42" }
+  display_name = var.volume_display_name
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "3feffc93-13c7-46bd-b8d6-8ac83ea078a4"
+  }
   is_auto_tune_enabled = var.volume_is_auto_tune_enabled
   kms_key_id           = oci_kms_key.test_key.id
   size_in_gbs          = var.volume_size_in_gbs
@@ -43,9 +45,11 @@ resource "oci_core_volume" "fail" {
     #Optional
     display_name = var.volume_block_volume_replicas_display_name
   }
-  defined_tags         = { "Operations.CostCenter" = "42" }
-  display_name         = var.volume_display_name
-  freeform_tags        = { "Department" = "Finance" }
+  defined_tags = { "Operations.CostCenter" = "42" }
+  display_name = var.volume_display_name
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "a54276c5-4396-4e59-9c99-e2bf7c9c1ad1"
+  }
   is_auto_tune_enabled = var.volume_is_auto_tune_enabled
   kms_key_id           = oci_kms_key.test_key.id
   size_in_gbs          = var.volume_size_in_gbs

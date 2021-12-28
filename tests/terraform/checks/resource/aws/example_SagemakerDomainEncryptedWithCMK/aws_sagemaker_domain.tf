@@ -12,6 +12,9 @@ resource "aws_sagemaker_domain" "pass" {
   retention_policy {
     home_efs_file_system = "Delete"
   }
+  tags = {
+    yor_trace = "7f998ac3-688b-4205-b00f-da02852ce568"
+  }
 }
 
 resource "aws_sagemaker_domain" "fail" {
@@ -26,5 +29,8 @@ resource "aws_sagemaker_domain" "fail" {
 
   retention_policy {
     home_efs_file_system = "Delete"
+  }
+  tags = {
+    yor_trace = "fbf5eaea-3927-45e0-944f-9d58d9c28f0e"
   }
 }

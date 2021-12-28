@@ -11,6 +11,12 @@
         "WebVPC": {
             "Type": "AWS::EC2::VPC",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "c27d5fb3-b830-4155-9775-ea2d1f98f379"
+                  }
+                ],
                 "CidrBlock": {
                     "Ref": "CidrBlock"
                 },
@@ -21,6 +27,12 @@
         "MySG": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "bfaee143-23bf-461e-8838-101dacffd714"
+                  }
+                ],
                 "GroupName": "sg_group_name",
                 "GroupDescription": "sg_group_description",
                 "VpcId": {

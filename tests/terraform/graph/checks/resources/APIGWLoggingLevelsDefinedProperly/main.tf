@@ -20,6 +20,9 @@ resource "aws_api_gateway_rest_api" "ok_example" {
   })
 
   name = "ok_example"
+  tags = {
+    yor_trace = "8f988e0d-ff36-411a-b608-81efe69f2ba3"
+  }
 }
 
 resource "aws_api_gateway_deployment" "ok_example" {
@@ -38,6 +41,9 @@ resource "aws_api_gateway_stage" "ok_example" {
   deployment_id = aws_api_gateway_deployment.ok_example.id
   rest_api_id   = aws_api_gateway_rest_api.ok_example.id
   stage_name    = "ok_example"
+  tags = {
+    yor_trace = "df7ad1cb-df06-46ab-8459-3549e2546f9e"
+  }
 }
 
 resource "aws_api_gateway_method_settings" "all" {
@@ -81,6 +87,9 @@ resource "aws_api_gateway_stage" "not_connected" {
   deployment_id = aws_api_gateway_deployment.not_connected.id
   rest_api_id   = aws_api_gateway_rest_api.not_connected.id
   stage_name    = "not_connected"
+  tags = {
+    yor_trace = "2ef3713d-c347-41df-96ed-02ffc4ff5af4"
+  }
 }
 
 resource "aws_api_gateway_method_settings" "all" {

@@ -4,7 +4,13 @@ Resources:
     Type: AWS::Transfer::Server
     Properties: 
       EndpointType: "VPC"
+      Tags:
+        - Key: yor_trace
+          Value: 4d959f35-bf09-4982-a1e3-b5cdb9ffb366
   VPCENDPOINT:
     Type: AWS::Transfer::Server
     Properties: 
       EndpointType: "VPC_ENDPOINT"
+      Tags:
+        - Key: yor_trace
+          Value: c97feac8-3a4b-41d0-9490-884a052bb074

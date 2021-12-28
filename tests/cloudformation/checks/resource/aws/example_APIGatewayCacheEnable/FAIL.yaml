@@ -7,6 +7,9 @@ Resources:
       Description: test
       RestApiId: test
       DeploymentId: test
+      Tags:
+        - Key: yor_trace
+          Value: 653094a0-04e9-4734-a83e-575ff14f7c92
   CacheFalse:
     Type: AWS::ApiGateway::Stage
     Properties:
@@ -14,3 +17,6 @@ Resources:
       Description: test
       RestApiId: test
       CacheClusterEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: be476545-1398-4aa0-9286-c9949c7a9d56

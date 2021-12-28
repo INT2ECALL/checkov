@@ -15,6 +15,12 @@
         "WebVPC": {
             "Type": "AWS::EC2::VPC",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "f5fba17c-c1c1-418b-8f19-fc87e6583c0b"
+                  }
+                ],
                 "CidrBlock": "172.16.0.0/16",
                 "EnableDnsSupport": true,
                 "EnableDnsHostnames": true
@@ -23,6 +29,12 @@
         "DefaultDB": {
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "5d171932-646a-4772-bac3-fa1c7f4f5028"
+                  }
+                ],
                 "DBName": {
                     "Fn::Sub": "rds-${AWS::AccountId}-${CompanyName}-${Environment}"
                 },

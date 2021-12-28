@@ -10,4 +10,7 @@ module "test_module" {
 # Bucket that will fail (no encryption) defined OUTSIDE a module
 resource "aws_s3_bucket" "outside" {
   bucket = "outside-bucket"
+  tags = {
+    yor_trace = "e2503354-a020-46cd-a49c-5fc6fc5fe425"
+  }
 }

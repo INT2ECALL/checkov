@@ -13,6 +13,9 @@ resource "aws_backup_plan" "example" {
     }
     resource_type = "EC2"
   }
+  tags = {
+    yor_trace = "1c5aa76d-d327-43b3-904f-0591875e4b8a"
+  }
 }
 
 resource "aws_backup_selection" "ok_backup" {
@@ -31,7 +34,8 @@ resource "aws_efs_file_system" "ok_efs" {
   creation_token = "my-product"
 
   tags = {
-    Name = "MyProduct"
+    Name      = "MyProduct"
+    yor_trace = "f4b87a14-ebb6-4fc7-b2c3-d33fe7982e7c"
   }
 }
 
@@ -50,7 +54,8 @@ resource "aws_efs_file_system" "ok_efs" {
   creation_token = "my-product"
 
   tags = {
-    Name = "MyProduct"
+    Name      = "MyProduct"
+    yor_trace = "f4b87a14-ebb6-4fc7-b2c3-d33fe7982e7c"
   }
 }
 
@@ -59,6 +64,7 @@ resource "aws_efs_file_system" "not_ok_efs" {
   creation_token = "my-product"
 
   tags = {
-    Name = "MyProduct"
+    Name      = "MyProduct"
+    yor_trace = "bd279f78-42a2-454e-8f48-a48ef918bd20"
   }
 }

@@ -5,6 +5,9 @@ resource "aws_fsx_windows_file_system" "pass" {
   storage_capacity    = 32
   subnet_ids          = [aws_subnet.test1.id]
   throughput_capacity = 8
+  tags = {
+    yor_trace = "189fa9d0-1f6e-44d8-9b5b-21894fac6057"
+  }
 }
 
 resource "aws_fsx_windows_file_system" "fail" {
@@ -13,4 +16,7 @@ resource "aws_fsx_windows_file_system" "fail" {
   storage_capacity    = 32
   subnet_ids          = [aws_subnet.test1.id]
   throughput_capacity = 8
+  tags = {
+    yor_trace = "1b307d8e-98d5-45a8-b4e5-efeee8536424"
+  }
 }

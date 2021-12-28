@@ -15,10 +15,16 @@ resource "aws_iam_group" "group" {
 
 resource "aws_iam_user" "user_one" {
   name = "test-user"
+  tags = {
+    yor_trace = "2a49d226-a55b-4f96-a984-ebd1e175070b"
+  }
 }
 
 resource "aws_iam_user" "user_two" {
   name = "test-user-two"
+  tags = {
+    yor_trace = "635fb538-845a-486c-9fcc-49921ed40b63"
+  }
 }
 
 

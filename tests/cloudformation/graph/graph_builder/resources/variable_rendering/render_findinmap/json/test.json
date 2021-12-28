@@ -17,6 +17,12 @@
         "EC2Instance": {
             "Type": "AWS::EC2::Instance",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "c347fd9d-b10e-41ba-bdee-56d65cdd2eef"
+                  }
+                ],
                 "ImageId": {
                     "Fn::FindInMap": [
                         "RegionMap",

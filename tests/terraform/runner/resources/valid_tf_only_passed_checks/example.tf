@@ -20,12 +20,14 @@ resource "aws_s3_bucket" "foo-bucket" {
   }
   acl = "private"
   tags = merge(
-      var.common_tags,
-  {
-    name = "VM Virtual Machine"
-    group = "foo"
-  }
-  )
+    var.common_tags,
+    {
+      name  = "VM Virtual Machine"
+      group = "foo"
+    }
+    , {
+      yor_trace = "0ca4e752-2cb6-41f8-ba6b-44b7e763216a"
+  })
 }
 
 data "aws_caller_identity" "current" {}

@@ -15,3 +15,6 @@ Resources:
       ServiceRole: arn:aws:iam::123456789012:role/CodeBuild-service-role
       Source: 
         Type: NO_SOURCE
+      Tags:
+        - Key: yor_trace
+          Value: eb8b1575-2a68-4ab6-abb7-8956ac936f57

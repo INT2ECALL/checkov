@@ -4,6 +4,12 @@
         "RootRole": {
             "Type": "AWS::IAM::Role",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "2d34c1e6-9b69-41b1-8208-33649bdfe1a7"
+                  }
+                ],
                 "AssumeRolePolicyDocument": {
                     "Version": "2012-10-17",
                     "Statement": [

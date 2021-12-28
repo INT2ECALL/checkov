@@ -11,6 +11,9 @@ Resources:
         Variables:
           key: value
       KmsKeyArn: arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab
+      Tags:
+        - Key: yor_trace
+          Value: a165f69d-eb05-4289-bc62-e59011a81e9d
   NoEnvAndNoKey:
     Type: AWS::Lambda::Function
     Properties:
@@ -18,3 +21,6 @@ Resources:
       Code:
         ZipFile: |
           print('test')
+      Tags:
+        - Key: yor_trace
+          Value: eab72b81-f9da-4f12-9903-521f2388a618

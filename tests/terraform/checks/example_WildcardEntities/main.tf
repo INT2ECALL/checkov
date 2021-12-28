@@ -1,7 +1,7 @@
 locals {
-  dummy_with_dash      = format("-%s", var.dummy_1)
-  dummy_with_comma     = format(":%s", var.dummy_1)
-  bucket_name          = var.bucket_name
+  dummy_with_dash  = format("-%s", var.dummy_1)
+  dummy_with_comma = format(":%s", var.dummy_1)
+  bucket_name      = var.bucket_name
 }
 
 variable "user_exists" {
@@ -59,4 +59,7 @@ resource "aws_s3_bucket" "template_bucket" {
   bucket        = local.bucket_name
   acl           = var.acl
   force_destroy = true
+  tags = {
+    yor_trace = "fd2f3b50-eb52-46ca-beae-50f8b8550e28"
+  }
 }

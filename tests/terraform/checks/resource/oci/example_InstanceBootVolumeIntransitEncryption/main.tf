@@ -24,8 +24,10 @@ resource "oci_core_instance" "fail" {
     some_string   = "stringA"
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "f653c473-5612-43a3-8858-6811d1c7fd05"
+  }
 
   instance_options {
     are_legacy_imds_endpoints_disabled = var.instance_instance_options_are_legacy_imds_endpoints_disabled
@@ -116,8 +118,10 @@ resource "oci_core_instance" "pass" {
     some_string   = "stringA"
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "b2cfa004-47ff-4aa4-878b-8683e6e9b8db"
+  }
   instance_options {
     are_legacy_imds_endpoints_disabled = var.instance_instance_options_are_legacy_imds_endpoints_disabled
   }
@@ -135,7 +139,7 @@ resource "oci_core_instance" "pass" {
 
   metadata = var.instance_metadata
   platform_config {
-        type = var.instance_platform_config_type
+    type                               = var.instance_platform_config_type
     is_measured_boot_enabled           = var.instance_platform_config_is_measured_boot_enabled
     is_secure_boot_enabled             = var.instance_platform_config_is_secure_boot_enabled
     is_trusted_platform_module_enabled = var.instance_platform_config_is_trusted_platform_module_enabled
@@ -144,7 +148,7 @@ resource "oci_core_instance" "pass" {
 
   preemptible_instance_config {
     preemption_action {
-            type = var.instance_preemptible_instance_config_preemption_action_type
+      type                 = var.instance_preemptible_instance_config_preemption_action_type
       preserve_boot_volume = var.instance_preemptible_instance_config_preemption_action_preserve_boot_volume
     }
   }
@@ -155,8 +159,8 @@ resource "oci_core_instance" "pass" {
   }
 
   source_details {
-        source_id = oci_core_image.test_image.id
-        source_type = "image"
+    source_id               = oci_core_image.test_image.id
+    source_type             = "image"
     boot_volume_size_in_gbs = var.instance_source_details_boot_volume_size_in_gbs
     kms_key_id              = oci_kms_key.test_key.id
   }

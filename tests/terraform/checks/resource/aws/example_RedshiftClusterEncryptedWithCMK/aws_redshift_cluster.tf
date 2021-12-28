@@ -10,6 +10,9 @@ resource "aws_redshift_cluster" "pass" {
   skip_final_snapshot                 = true
   encrypted                           = true
   kms_key_id                          = aws_kms_key.test.arn
+  tags = {
+    yor_trace = "7b24ab5b-66dc-43c9-8b49-fde69ddf51b1"
+  }
 }
 
 resource "aws_redshift_cluster" "fail" {
@@ -23,4 +26,7 @@ resource "aws_redshift_cluster" "fail" {
   allow_version_upgrade               = false
   skip_final_snapshot                 = true
   encrypted                           = true
+  tags = {
+    yor_trace = "4c1d3ab8-4ec2-4aaf-b2fb-ea1499ff7a97"
+  }
 }

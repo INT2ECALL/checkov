@@ -5,3 +5,6 @@ Resources:
     Properties: 
       Name: test
       KmsKeyId: test-key
+      Tags:
+        - Key: yor_trace
+          Value: 7e419507-af64-4372-bad7-68ed194f5420

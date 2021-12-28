@@ -17,21 +17,27 @@ variable "logging_bucket_prefix" {
 }
 
 resource "aws_cloudfront_distribution" "cf_dis" {
-  enabled           = true
+  enabled = true
   logging_config {
     include_cookies = var.logging_include_cookies
     bucket          = var.logging_bucket_id
     prefix          = var.logging_bucket_prefix
+  }
+  tags = {
+    yor_trace = "0211b499-be63-491a-9a33-eba2d9a97c29"
   }
 }
 
 
 resource "aws_s3_bucket" "website_bucket" {
   versioning {
-      enabled = var.versioning
+    enabled = var.versioning
+  }
+  tags = {
+    yor_trace = "0563e7d5-a1d2-445d-949a-23318d833938"
   }
 }
 
 variable "versioning" {
-    default = null
+  default = null
 }

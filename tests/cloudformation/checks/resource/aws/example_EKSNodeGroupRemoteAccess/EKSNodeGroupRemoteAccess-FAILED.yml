@@ -17,3 +17,6 @@ Resources:
         - subnet-e7e761ac
       RemoteAccess: 
         Ec2SshKey: SshKeyString
+      Tags:
+        - Key: yor_trace
+          Value: b8f823bf-82b9-45cf-94a1-008e1800dfc6
