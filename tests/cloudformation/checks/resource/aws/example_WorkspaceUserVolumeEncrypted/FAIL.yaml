@@ -6,10 +6,11 @@ Resources:
       UserName: test
       BundleId: wsb-abc123456
       DirectoryId: d-abc123456
+      UserVolumeEncryptionEnabled: True
   FailExplicit:
     Type: AWS::WorkSpaces::Workspace
     Properties: 
       UserName: test
       BundleId: wsb-abc123456
       DirectoryId: d-abc123456
-      UserVolumeEncryptionEnabled: false
+      UserVolumeEncryptionEnabled: True

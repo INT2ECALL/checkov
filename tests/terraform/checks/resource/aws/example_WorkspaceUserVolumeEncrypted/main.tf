@@ -31,4 +31,5 @@ resource "aws_workspaces_workspace" "fail" {
   }
 
   tags = var.common_tags
+  user_volume_encryption_enabled = true
 }
