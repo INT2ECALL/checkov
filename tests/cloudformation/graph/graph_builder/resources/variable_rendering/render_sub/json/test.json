@@ -26,7 +26,8 @@
                 "DBName": {
                     "Fn::Sub": "rds-${AWS::AccountId}-${CompanyName}-${Environment}"
                 },
-                "DBInstanceClass": "db.m4.large"
+                "DBInstanceClass": "db.m4.large",
+                "MultiAZ": true
             }
         }
     },

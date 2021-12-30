@@ -24,6 +24,7 @@ Resources:
       Engine: 'mysql'
       MasterUsername: 'master'
       MasterUserPassword: 'password'
+      MultiAZ: True
 Outputs:
   DBAppPublicDNS:
     Description: DB App Public DNS Name

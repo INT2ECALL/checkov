@@ -9,3 +9,4 @@ Resources:
       Engine: 'mysql'
       MasterUsername: 'master'
       MasterUserPassword: 'password'
+      MultiAZ: True

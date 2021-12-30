@@ -23,6 +23,7 @@ Resources:
       Engine: 'mysql'
       MasterUsername: 'master'
       MasterUserPassword: 'password'
+      MultiAZ: True
 Outputs:
   MyDBInstanceName:
     Description: My DB Instance Name

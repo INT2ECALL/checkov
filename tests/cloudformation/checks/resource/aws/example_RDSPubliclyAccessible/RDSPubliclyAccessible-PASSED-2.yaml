@@ -8,3 +8,4 @@ Resources:
       MasterUsername: 'master'
       MasterUserPassword: 'password'
       PubliclyAccessible: false
+      MultiAZ: True

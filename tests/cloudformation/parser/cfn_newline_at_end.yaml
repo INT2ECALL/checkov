@@ -7,6 +7,7 @@ Resources:
       Engine: 'mysql'
       MasterUsername: 'master'
       MasterUserPassword: 'password'
+      MultiAZ: True
   MyBucket:
     Type: 'AWS::S3::Bucket'
     Properties:

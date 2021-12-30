@@ -27,7 +27,8 @@
         "DBInstanceClass": "db.t3.micro",
         "Engine": "mysql",
         "MasterUsername": "master",
-        "MasterUserPassword": "password"
+        "MasterUserPassword": "password",
+        "MultiAZ": true
       }
     }
   },

@@ -8,3 +8,4 @@ Resources:
       MasterUsername: 'master'
       MasterUserPassword: 'password'
       StorageEncrypted: true
+      MultiAZ: True
