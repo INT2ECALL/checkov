@@ -19,6 +19,7 @@ Resources:
     Properties:
       DBName: !Sub "rds-${AWS::AccountId}-${CompanyName}-${Environment}"
       DBInstanceClass: "db.m4.large"
+      MultiAZ: True
 Outputs:
   DBEndpoint:
     Description: DB Endpoint

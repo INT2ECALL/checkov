@@ -5,15 +5,18 @@ Resources:
       DBName: 'mydb'
       DBInstanceClass: 'db.r3.2xlarge'
       Engine: 'aurora'
+      MultiAZ: True
   MyDBAurora1:
     Type: 'AWS::RDS::DBInstance'
     Properties:
       DBName: 'mydb'
       DBInstanceClass: 'db.r3.2xlarge'
       Engine: 'aurora-mysql'
+      MultiAZ: True
   MyDBAurora2:
     Type: 'AWS::RDS::DBInstance'
     Properties:
       DBName: 'mydb'
       DBInstanceClass: 'db.t3.medium'
       Engine: 'aurora-postgresql'
+      MultiAZ: True

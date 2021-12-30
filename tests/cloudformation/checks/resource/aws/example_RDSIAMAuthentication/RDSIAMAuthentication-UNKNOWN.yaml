@@ -6,3 +6,4 @@ Resources:
       Engine: 'mariadb'
       MasterUsername: 'username'
       MasterUserPassword: 'password'
+      MultiAZ: True

@@ -6,6 +6,7 @@ Resources:
       Engine: 'mysql'
       MasterUsername: 'username'
       MasterUserPassword: 'password'
+      MultiAZ: True
   DefaultPostgres:
     Type: 'AWS::RDS::DBInstance'
     Properties:
@@ -13,6 +14,7 @@ Resources:
       Engine: 'postgres'
       MasterUsername: 'username'
       MasterUserPassword: 'password'
+      MultiAZ: True
   DisabledMysql:
     Type: 'AWS::RDS::DBInstance'
     Properties:
@@ -21,6 +23,7 @@ Resources:
       MasterUsername: 'username'
       MasterUserPassword: 'password'
       EnableIAMDatabaseAuthentication: false
+      MultiAZ: True
   DisabledPostgres:
     Type: 'AWS::RDS::DBInstance'
     Properties:
@@ -29,3 +32,4 @@ Resources:
       MasterUsername: 'username'
       MasterUserPassword: 'password'
       EnableIAMDatabaseAuthentication: false
+      MultiAZ: True
