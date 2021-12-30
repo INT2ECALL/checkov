@@ -24,7 +24,7 @@ Resources:
         DayOfWeek: Monday
         TimeOfDay: '22:45'
         TimeZone: America/Los_Angeles
-      PubliclyAccessible: true
+      PubliclyAccessible: False
       SubnetIds:
         - 'subnet-0a66efd758816811b'
       Users:
