@@ -10,5 +10,5 @@ Resources:
     Type: AWS::CloudTrail::Trail
     Properties: 
       IsLogging: True
-      IsMultiRegionTrail: False
+      IsMultiRegionTrail: True
       S3BucketName: String
